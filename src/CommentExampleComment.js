@@ -43,7 +43,7 @@ const DataComment = (props) => {
         </Comment.Actions>
         <Comment.Group> 
           {comments && comments.length > 0 && (comments.map((e, i)=>{
-              return <DataComment data = {e}/>
+              return <DataComment data = {e} key = {i}/>
           }))}
         </Comment.Group>
       </Comment.Content>
@@ -61,7 +61,7 @@ const CommentExampleComment = () => (
       <Header as='h3' dividing>
         Comments
       </Header>
-      {data.map((e, i)=><DataComment data = {e}/>)}
+      {data.map((e, i)=><DataComment data = {e} key={i}/>)}
     </Comment.Group>
   </div>
 )
